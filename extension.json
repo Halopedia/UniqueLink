@@ -1,0 +1,26 @@
+{
+	"name": "UniqueLink",
+	"author": "Daniel Beard",
+	"url": "https://www.halopedia.org/Halopedia:Extensions/UniqueLink",
+	"namemsg": "uniquelink-extension-name",
+	"descriptionmsg": "uniquelink-extension-desc",
+	"version": "0.0.1",
+	"license-name": "GPL-2.0-or-later",
+	"type": "parserhook",
+	"manifest_version": 2,
+	"MessagesDirs": {
+		"UniqueLink": [
+			"i18n"
+		]
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\UniqueLink\\": "includes/"
+  },
+  "Hooks": {
+		"ParserFirstCallInit": "MediaWiki\\Extension\\UniqueLink\\Hooks::onParserFirstCallInit",
+		"ParserClearState": "MediaWiki\\Extension\\UniqueLink\\Hooks::onParserClearState"
+	},
+	"ExtensionMessagesFiles": {
+		"UniqueLinkMagic": "UniqueLink.i18n.php"
+	}
+}

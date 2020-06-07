@@ -1,0 +1,11 @@
+{
+  "@metadata": {
+		"authors": [
+			"Daniel Beard"
+		]
+  },
+  
+	"uniquelink-extension-name": "{{name}}",
+	"uniquelink-extension-desc": "{{desc|what=extension|name=UniqueLink|url=https://www.halopedia.org/Halopedia:Extensions/UniqueLink}}"
+
+}

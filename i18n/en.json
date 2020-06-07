@@ -1,0 +1,11 @@
+{
+  "@metadata": {
+		"authors": [
+			"Daniel Beard"
+		]
+  },
+  
+	"uniquelink-extension-name": "UniqueLink",
+	"uniquelink-extension-desc": "A set of parser functions used for conditionally inserting links only if the page hasn't been linked yet."
+
+}
