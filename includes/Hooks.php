@@ -102,12 +102,13 @@ class Hooks {
   }
 
   /**
-   * Hook called when parser is first initialised. Initialises the link store
-   * object that records all pages uniquely linked to, and registers the parser
-   * functions.
+   * Hook called when parser is having its state cleared, so it can parse
+   * another page. Resets the link store, so that the list of pages already
+   * linked to by the uniquelink parser functions is not carried from page to
+   * page
    * 
-   * @see https://www.mediawiki.org/wiki/Manual:Hooks/ParserFirstCallInit
-   * @param \Parser $parser the parser object that is being initialised
+   * @see https://www.mediawiki.org/wiki/Manual:Hooks/ParserClearState
+   * @param \Parser $parser the parser object that is having its state cleared
    */
   public static function onParserClearState( \Parser $parser ) {
     LinkStore::resetLinkStore( $parser );
