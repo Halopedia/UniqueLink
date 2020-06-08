@@ -163,10 +163,11 @@ class LinkStore {
       return $text;
     } else {
       // If it has not been, update the link store and then check whether dest
-      // actually exists
+      // actually exists (title object is not null, and the page exists or is
+      // interwiki) and display the output on the page accordingly
       $store->setLinked( $dest, $category );
       $title = \Title::newFromText( $dest );
-      if ( $title->isExternal() || $title->exists() ) {
+      if ( !empty( $title ) && ( $title->isExternal() || $title->exists() ) ) {
         return "[[$dest|$text]]";
       } else {
         return $text;
