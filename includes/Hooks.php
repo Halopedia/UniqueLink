@@ -65,7 +65,10 @@ class Hooks {
     global $egUniqueLinkDisabledFunctions;
 
     // Do nothing if the parser function is disabled
-    if ( in_array( $name, $egUniqueLinkDisabledFunctions ) ) {
+    if (
+      !empty( $egUniqueLinkDisabledFunctions )
+      && in_array( $name, $egUniqueLinkDisabledFunctions )
+    ) {
       return;
     }
 
@@ -89,7 +92,10 @@ class Hooks {
     global $egUniqueLinkDisabledFunctions;
 
     // Do nothing if the parser function is disabled
-    if ( in_array( $name, $egUniqueLinkDisabledFunctions ) ) {
+    if (
+      !empty( $egUniqueLinkDisabledFunctions )
+      && in_array( $name, $egUniqueLinkDisabledFunctions )
+    ) {
       return;
     }
 
