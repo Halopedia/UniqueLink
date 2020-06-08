@@ -166,10 +166,10 @@ class LinkStore {
       // actually exists
       $store->setLinked( $dest, $category );
       $title = \Title::newFromText( $dest );
-      if ( $title->isExternal() || $title->exists() ) {
-        return "[[$dest|$text]]";
-      } else {
-        return $text;
+      if ( $title ) {
+        if ( $title->isExternal() || $title->exists() ) {
+          return "[[$dest|$text]]";
+        }
       }
     }
   }
